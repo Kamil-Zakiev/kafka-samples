@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka;
@@ -19,16 +20,20 @@ namespace WeatherLoader
         
         public async Task Publish(IReadOnlyCollection<Weather> weathers, CancellationToken cancellationToken)
         {
-            foreach (var weather in weathers)
-            {
-                var message = new Message<string, int>()
+            var tasks = weathers
+                .Select(weather =>
                 {
-                    Key = weather.City,
-                    Value = weather.Temperature
-                };
-                
-                await _producer.ProduceAsync(_topic, message, cancellationToken);
-            }
+                    var message = new Message<string, int>()
+                    {
+                        Key = weather.City,
+                        Value = weather.Temperature
+                    };
+
+                    return _producer.ProduceAsync(_topic, message, cancellationToken);
+                })
+                .ToArray();
+
+            await Task.WhenAll(tasks);
         }
 
         public void Dispose()
