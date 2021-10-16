@@ -4,6 +4,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherLoader", "src\Weathe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TempAnalyzer", "TempAnalyzer\TempAnalyzer.csproj", "{B8719ECF-BB77-4D9B-BB04-C08F158CD526}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.SDK", "Kafka.SDK\Kafka.SDK.csproj", "{36BD8CC9-FC51-41AF-8B30-E7BB8F35088C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherLoader.IntegrationTests", "tests\WeatherLoader.IntegrationTests\WeatherLoader.IntegrationTests.csproj", "{B20DE194-8234-43B2-BB8F-796150921B89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kafka.TestKit", "Kafka.TestKit\Kafka.TestKit.csproj", "{5703570E-AF5E-47FA-9D08-405C118E8A71}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +24,17 @@ Global
 		{B8719ECF-BB77-4D9B-BB04-C08F158CD526}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8719ECF-BB77-4D9B-BB04-C08F158CD526}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8719ECF-BB77-4D9B-BB04-C08F158CD526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36BD8CC9-FC51-41AF-8B30-E7BB8F35088C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36BD8CC9-FC51-41AF-8B30-E7BB8F35088C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36BD8CC9-FC51-41AF-8B30-E7BB8F35088C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36BD8CC9-FC51-41AF-8B30-E7BB8F35088C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B20DE194-8234-43B2-BB8F-796150921B89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B20DE194-8234-43B2-BB8F-796150921B89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B20DE194-8234-43B2-BB8F-796150921B89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B20DE194-8234-43B2-BB8F-796150921B89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5703570E-AF5E-47FA-9D08-405C118E8A71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5703570E-AF5E-47FA-9D08-405C118E8A71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5703570E-AF5E-47FA-9D08-405C118E8A71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5703570E-AF5E-47FA-9D08-405C118E8A71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
